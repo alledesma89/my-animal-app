@@ -1,78 +1,71 @@
-Animal Search App
-Este proyecto es una aplicación React para buscar animales, desarrollada con Vite y React Router. Incluye funcionalidades básicas de búsqueda, navegación y pruebas automatizadas con Vitest y Testing Library.
+Proyecto de Búsqueda de Animales
+Este proyecto es una pequeña aplicación web que permite buscar animales y ver detalles de cada uno. Lo desarrollé como parte de una prueba técnica para demostrar mis habilidades en React, testing y despliegue.
 
-¿Qué incluye este proyecto?
-Página principal (Home) con un formulario para buscar animales.
+Qué hice y por qué
+Frontend con React + Vite: Elegí Vite por su velocidad y simplicidad para crear la app React.
 
-Página de resultados (Results) que muestra los animales filtrados según la búsqueda.
+Routing con React Router: Para manejar las rutas y los parámetros de búsqueda, usando hooks como useSearchParams.
 
-Componente reutilizable AnimalCard para mostrar la información de cada animal.
+Generación de datos fake: Como no había API real, implementé un generador de datos fake con Faker.js y un mock para simular resultados.
 
-Rutas gestionadas con React Router.
+Componentes bien separados: Creé componentes reutilizables como AnimalCard, Spinner y una página principal de resultados.
 
-Simulación de llamada a una API con datos falsos y retraso (mock).
+Accesibilidad: Añadí atributos ARIA y manejé eventos de teclado para que la app sea más accesible.
 
-Tests unitarios y de integración para asegurar que la funcionalidad principal funciona correctamente.
+Tests con Vitest y Testing Library: Escribí pruebas unitarias y de integración para asegurar el correcto funcionamiento, incluyendo mocks para los datos fake.
 
-Configuración del entorno de pruebas con Vitest y jsdom para simular navegador.
+Despliegue con Vercel: Configuré el proyecto para hacer deploy automático en Vercel conectado a GitHub, con la configuración necesaria para Vite.
 
-Cómo ejecutar el proyecto
-Para probar la aplicación en tu equipo, sigue estos pasos:
-
-Clona este repositorio:
+Cómo ejecutar el proyecto localmente
+Clona el repositorio:
 
 bash
 Copiar
 Editar
-git clone <URL-del-repo>
-Entra en la carpeta del proyecto:
-
-bash
-Copiar
-Editar
-cd my-animal-app
-Instala las dependencias:
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
+Instala dependencias:
 
 bash
 Copiar
 Editar
 npm install
-Inicia la aplicación en modo desarrollo:
+Levanta el servidor de desarrollo:
 
 bash
 Copiar
 Editar
 npm run dev
-Abre tu navegador y accede a:
-
-arduino
-Copiar
-Editar
-http://localhost:5173
-Cómo ejecutar los tests
-Para comprobar que todo funciona correctamente, ejecuta los tests con:
+Ejecuta los tests:
 
 bash
 Copiar
 Editar
-npm test
-Los tests usan Vitest y Testing Library, cubriendo casos clave como:
+npm run test
+Cómo funciona la aplicación
+Al cargar, puedes buscar un tipo de animal en el input.
 
-Mostrar mensaje cuando no hay resultados.
+Los resultados se filtran y muestran como tarjetas con imagen, título y tipo.
 
-Navegación y renderizado correcto de componentes según la ruta.
+Al hacer clic o usar teclado en una tarjeta, aparece el detalle con descripción y opción para cerrar.
 
-Presencia de elementos básicos en la página principal.
+El scroll se mueve suavemente arriba cuando abres un detalle.
 
-Estructura del proyecto
-/src/pages – Contiene las páginas principales (Home, Results).
+La aplicación maneja estados de carga, sin resultados o sin término de búsqueda con mensajes claros.
 
-/src/components – Componentes reutilizables (AnimalCard).
+Todo es responsive y accesible.
 
-/src/utils – Funciones auxiliares, simulación de API (delay.js).
+Tecnologías usadas
+React 18
 
-/src/data – Datos falsos para pruebas y simulación.
+Vite
 
-Notas finales
-Si tienes cualquier duda o necesitas ayuda para ejecutar el proyecto, no dudes en contactarme.
-Gracias por la oportunidad de trabajar en este proyecto, espero que el resultado sea de tu agrado.
+React Router DOM
+
+Faker.js
+
+Vitest + Testing Library
+
+Vercel (deploy)
+
+CSS simple y modular
