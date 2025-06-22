@@ -24,6 +24,5 @@ test('Home renderiza título, input, botón y footer, y navega al enviar', () =>
   fireEvent.change(input, { target: { value: 'cat' } });
   fireEvent.click(button);
 
-  // No podemos testear la navegación directamente aquí, 
-  // pero con memoria router podemos probar en test de App.jsx (más avanzado)
+
 });
